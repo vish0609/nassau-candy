@@ -390,7 +390,7 @@ elif page == "Recommendations":
             color = {"High": "#ffe0e0", "Medium": "#fff3cd", "Low": "#d4edda"}.get(val, "")
             return f"background-color: {color}"
 
-        styled = recs_df.style.applymap(highlight_risk, subset=["Risk Level"])
+        styled = recs_df.style.map(highlight_risk, subset=["Risk Level"])
         st.dataframe(styled, use_container_width=True, hide_index=True)
 
         # Chart: days saved per product
