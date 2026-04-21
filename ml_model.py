@@ -1,19 +1,3 @@
-"""
-ml_model.py
-===========
-This file trains three machine learning models to predict lead time.
-
-Models used:
-  1. Linear Regression   - simple baseline (like drawing a straight line through data)
-  2. Random Forest       - many decision trees working together (more accurate)
-  3. Gradient Boosting   - builds trees one-by-one, each fixing the last one's mistakes
-
-For beginners:
-  - "Training" a model means showing it your historical data so it learns patterns.
-  - "Predicting" means using the trained model to guess values for new inputs.
-  - "Evaluation" means checking how accurate the predictions are.
-"""
-
 import pandas as pd
 import numpy as np
 
