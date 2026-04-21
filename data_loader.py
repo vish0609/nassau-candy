@@ -1,14 +1,3 @@
-"""
-data_loader.py
-==============
-This file reads the Nassau Candy CSV, cleans it,
-adds factory info, and calculates lead times.
-
-For beginners:
-- A function is a block of code that does one job.
-- We call these functions from other files to get clean data.
-"""
-
 import pandas as pd
 import numpy as np
 
