@@ -1,19 +1,4 @@
-"""
-app.py
-======
-The main Streamlit dashboard for the Nassau Candy
-Factory Reallocation & Shipping Optimization System.
 
-Modules:
-  1. Overview        - KPI cards and charts
-  2. Factory Simulator  - predict lead time across factories
-  3. What-If Analysis   - compare current vs. alternative
-  4. Recommendations    - ranked reassignment suggestions
-  5. Risk & Impact      - profit alerts and warnings
-
-To run this file, open your terminal and type:
-    streamlit run app.py
-"""
 
 import streamlit as st
 import pandas as pd
