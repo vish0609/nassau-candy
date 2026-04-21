@@ -9,24 +9,7 @@ from sklearn.metrics         import mean_absolute_error, mean_squared_error, r2_
 
 
 def encode_features(df):
-    """
-    Machine learning models only understand numbers, not text.
-    This function converts text columns (like "Atlantic", "First Class")
-    into numbers using LabelEncoder.
-
-    For example:
-      "Atlantic"  → 0
-      "Gulf"      → 1
-      "Interior"  → 2
-      "Pacific"   → 3
-
-    Parameters:
-        df : the cleaned DataFrame from data_loader.py
-
-    Returns:
-        df_enc   : DataFrame with new numeric columns added
-        encoders : dictionary of encoders (needed to reverse the conversion later)
-    """
+    
     df_enc = df.copy()
 
     encoders = {}
