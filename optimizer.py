@@ -1,15 +1,3 @@
-"""
-optimizer.py
-============
-This file contains the "brain" of the project:
-  - Simulate: what would happen if we moved a product to a different factory?
-  - Recommend: which factory reassignments give the best improvement?
-  - Risk: how much profit is at risk?
-
-For beginners:
-  - Think of this as a "what-if calculator" for factory decisions.
-"""
-
 import numpy as np
 import pandas as pd
 from data_loader import FACTORY_COORDS, REGION_COORDS, haversine_distance, PRODUCT_FACTORY
@@ -17,24 +5,7 @@ from ml_model    import predict_lead_time
 
 
 def simulate_factory_options(df, model, encoders, features, product, region, ship_mode):
-    """
-    For a given product + region + ship mode, predict the lead time
-    if the product were made at EACH of the 5 factories.
-
-    This answers: "Which factory would be fastest for this product?"
-
-    Parameters:
-        df        : cleaned data (used to get average sales/units/cost for this product)
-        model     : trained ML model
-        encoders  : label encoders from training
-        features  : list of feature column names
-        product   : product name (text)
-        region    : region name (text) or "All Regions"
-        ship_mode : shipping method (text)
-
-    Returns:
-        results : list of dicts, one per factory, with predicted lead time and distance
-    """
+   
     # Get average order characteristics for this product (for realistic predictions)
     product_rows = df[df["Product Name"] == product]
     avg_sales = product_rows["Sales"].mean()
